@@ -1,9 +1,8 @@
 ---
 - hosts: onos-master
-  #remote_user: root
   vars_files:
-    - group_vars/version
-    - group_vars/config
+    - group_vars/version.yml
+    - group_vars/config.yml
   roles:
     - apt
     - ntp
