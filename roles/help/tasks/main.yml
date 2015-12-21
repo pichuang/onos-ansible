@@ -1,0 +1,13 @@
+---
+- name: Create onos-ansible-help.txt
+  template:
+    src: "onos-ansible-help.txt.j2"
+    dest: "{{ HOME_PATH }}"
+    mode: 0644
+
+- name: Copy onos-cheat-sheat.txt
+  file:
+    src: "onos-cheat-sheat.txt"
+    dest: "{{ HOME_PATH }}"
+    mode: 0644
+

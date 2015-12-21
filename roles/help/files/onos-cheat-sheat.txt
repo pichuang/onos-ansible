@@ -1,0 +1,13 @@
+# build world
+ob -T 4
+
+# Rebuild code if code is change
+obs -T 4
+
+# Run ONOS instance
+ok clean
+
+# View log
+tl
+tlo
+tle
