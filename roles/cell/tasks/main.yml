@@ -3,5 +3,5 @@
   template:
     src: "sdnds-tw.j2"
     dest: "{{ ONOS_ROOT }}/tools/test/cells/sdnds-tw"
-    mode: 0444
+    mode: 0644
   tags: cell

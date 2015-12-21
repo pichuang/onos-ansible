@@ -1,7 +1,7 @@
 ---
 - name: Create onos-ansible-help.txt
   template:
-    src: "onos-ansible-help.txt.j2"
+    src: "onos-start.sh.j2"
     dest: "{{ HOME_PATH }}"
     mode: 0644
 

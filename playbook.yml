@@ -12,5 +12,5 @@
     - karaf
     - bashrc
     - onos
-    #- cell
+    - cell
     - help

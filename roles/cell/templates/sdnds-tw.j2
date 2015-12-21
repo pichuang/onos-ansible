@@ -16,9 +16,8 @@ export ONOS_APPS="drivers,openflow,fwd,proxyarp,mobility"
 export OCN="{{ ansible_eth0.ipv4.address }}"
 
 # pattern to specify which address to use for inter-ONOS node communication (not used with single-instance core)
-#export ONOS_NIC="{{ hostvars[host]['ansible_eth1']['ipv4']['address']|regex_replace('') }}.*"
-#Workaround
-export ONOS_NIC="192.168.59.*"
+{% set ip = ansible_eth0.ipv4.address.split('.') %}
+export ONOS_NIC="{{ ip[0] }}.{{ ip[1] }}.{{ ip[2] }}.*"
 
 # User
 export ONOS_USER={{ ONOS_USER }}
