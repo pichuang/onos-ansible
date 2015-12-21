@@ -1,0 +1,25 @@
+# ONOS from SDNDS-TW cell
+
+# Cell name
+export ONOS_CELL={{ ONOS_CELL }}
+
+# the address of the VM to install the package onto
+export OC1="{{ ansible_eth0.ipv4.address }}"
+
+# the default address used by ONOS utilities when none are supplied
+export OCI="{{ ansible_eth0.ipv4.address }}"
+
+# the ONOS apps to load at startup
+export ONOS_APPS="drivers,openflow,fwd,proxyarp,mobility"
+
+# the Mininet VM (if you have one)
+export OCN="{{ ansible_eth0.ipv4.address }}"
+
+# pattern to specify which address to use for inter-ONOS node communication (not used with single-instance core)
+#export ONOS_NIC="{{ hostvars[host]['ansible_eth1']['ipv4']['address']|regex_replace('') }}.*"
+#Workaround
+export ONOS_NIC="192.168.59.*"
+
+# User
+export ONOS_USER={{ ONOS_USER }}
+export ONOS_GROUP={{ ONOS_GROUP }}

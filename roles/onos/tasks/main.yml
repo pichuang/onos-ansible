@@ -1,0 +1,21 @@
+---
+- name: Set variable for ONOS
+  set_fact:
+    ONOS_REPOS: "https://github.com/opennetworkinglab/onos"
+  tags: onos
+
+- name: Clone ONOS
+  git:
+    repo: "{{ ONOS_REPOS }}"
+    dest: "{{ ONOS_ROOT }}"
+    update: no
+    accept_hostkey: true
+    version: "{{ ONOS_VERSION }}"
+    force: no
+  tags: onos
+
+- name: Build ONOS
+  command: "mvn clean install"
+  args:
+    chdir: "{{ ONOS_ROOT }}"
+  tags: onos

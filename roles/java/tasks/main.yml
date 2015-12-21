@@ -7,13 +7,13 @@
   apt_repository: repo='ppa:webupd8team/java'
   tags: java
 
-- name: Accept Java {{ JAVA_VERSION }} Licence
+- name: Accept Java Licence
   shell: echo oracle-java{{ JAVA_VERSION }}-installer shared/accepted-oracle-license-v1-1 select true | tee /etc/oracle-java-{{ JAVA_VERSION }}-licence-acceptance | /usr/bin/debconf-set-selections
   args:
     creates: /etc/oracle-java-{{ JAVA_VERSION }}-licence-acceptance
   tags: java
 
-- name: Install Oracle Java {{ JAVA_VERSION }}
+- name: Install Oracle Java
   apt: name={{item}} state=latest
   with_items:
     - oracle-java{{ JAVA_VERSION }}-installer

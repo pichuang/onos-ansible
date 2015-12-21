@@ -1,0 +1,19 @@
+---
+- name: Append enviroment variables in bashrc
+  template:
+    src: "onos_env.j2"
+    dest: "~/.onos_env"
+    mode: 0444
+  tags: bashrc
+
+- name: Append source file in bashrc
+  lineinfile:
+    dest: "~/.bashrc"
+    line: "source ~/.onos_env"
+  tags: bashrc
+
+- name: Source bashrc
+  shell: source {{ HOME_PATH }}/.bashrc
+  args:
+    executable: /bin/bash
+  tags: bashrc

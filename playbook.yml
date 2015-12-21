@@ -9,4 +9,7 @@
     - ntp
     - java
     - maven
-    - karaf  
+    - karaf
+    - bashrc
+    - onos
+    #- cell

@@ -1,6 +1,7 @@
-ONOS-Ansible 
-====
+ONOS-Ansible Installer
+======================
 
-```
-ansible-playbook -i hosts playbook.yml -k
-```
+Just type ``ansible-playbook -i hosts playbook.yml -k``, and waiting
+
+
+

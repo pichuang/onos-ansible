@@ -7,15 +7,16 @@
 - name: Create Downloads directory
   file: path={{ DOWNLOADS_PATH }} state=directory
   tags: karaf
- 
+
 - name: Create Applications directory
-  file: path={{ APPLICATIONS_PATH }} state=directory                                                                                             
+  file: path={{ APPLICATIONS_PATH }} state=directory
   tags: karaf
 
 - name: Download Apache Karaf
   get_url:
     url: "{{ KARAF_MIRROR }}"
-    dest: "{{ DOWNLOADS_PATH }}" 
+    dest: "{{ DOWNLOADS_PATH }}"
+    force: no
   tags: karaf
 
 - name: Untar Apache Karaf
@@ -23,3 +24,11 @@
     src: "{{ DOWNLOADS_PATH }}/apache-karaf-{{ KARAF_VERSION }}.tar.gz"
     dest: "{{ APPLICATIONS_PATH }}"
   tags: karaf
+
+- name: Add features in org.apache.karaf.features.cfg
+  template:
+    src: "org.apache.karaf.features.cfg.j2"
+    dest: "{{ KARAF_ROOT }}/etc/org.apache.karaf.features.cfg"
+    mode: 0644
+  tags: karaf
+
