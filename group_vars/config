@@ -1,4 +1,5 @@
 ---
+# PATH
 APPLICATIONS_PATH: "~/Applications"
 DOWNLOADS_PATH: "~/Downloads"
 HOME_PATH: "~/"
@@ -8,6 +9,8 @@ JRE_HOME: "/usr/lib/jvm/java-8-oracle/jre"
 KARAF_ROOT: "/root/Applications/apache-karaf-3.0.3"
 M2_HOME: "/root/Applications/apache-maven-3.3.1"
 
+# Variable
 ONOS_USER: "root"
 ONOS_GROUP: "root"
 ONOS_CELL: "sdnds-tw"
+TIMEZONE: "Asia/Taipei"

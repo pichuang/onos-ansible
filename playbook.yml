@@ -3,7 +3,7 @@
   remote_user: root
   vars_files:
     - group_vars/version
-    - group_vars/location
+    - group_vars/config
   roles:
     - apt
     - ntp
