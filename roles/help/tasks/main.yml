@@ -2,12 +2,14 @@
 - name: Create onos-ansible-help.txt
   template:
     src: "onos-start.sh.j2"
-    dest: "{{ HOME_PATH }}"
-    mode: 0644
+    dest: "{{ HOME_PATH }}onos-start.sh"
+    mode: 0775
+  tags: help
 
 - name: Copy onos-cheat-sheat.txt
-  file:
+  copy:
     src: "onos-cheat-sheat.txt"
-    dest: "{{ HOME_PATH }}"
+    dest: "{{ HOME_PATH }}onos-cheat-sheat.txt"
     mode: 0644
+  tags: help
 
