@@ -1,0 +1,10 @@
+- name: Replace APT source list
+  replace:
+    dest=/etc/apt/sources.list
+    regexp=us.archive.ubuntu.com
+    replace=ubuntu.cs.nctu.edu.tw
+    backup=yes
+  tags: apt
+- name: Update APT Cache
+  apt: update_cache=yes
+  tags: apt

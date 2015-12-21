@@ -1,0 +1,12 @@
+---
+- hosts: onos-master
+  remote_user: root
+  vars_files:
+    - vars/version
+    - vars/location
+  roles:
+    - apt
+    - ntp
+    - java
+    - maven
+    - karaf  

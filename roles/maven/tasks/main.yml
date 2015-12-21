@@ -1,0 +1,25 @@
+---
+- name: Set variable for Apache Maven
+  set_fact:
+    MAVEN_MIRROR: "http://archive.apache.org/dist/maven/maven-{{ MAVEN_VERSION|regex_replace('\\..*', '') }}/{{ MAVEN_VERSION }}/binaries/apache-maven-{{ MAVEN_VERSION }}-bin.tar.gz"
+  tags: maven
+
+- name: Create Downloads directory
+  file: path={{ DOWNLOADS_PATH }} state=directory
+  tags: maven
+
+- name: Create Applications directory
+  file: path={{ APPLICATIONS_PATH }} state=directory
+  tags: maven
+
+- name: Download Apache Maven
+  get_url:
+    url: "{{ MAVEN_MIRROR }}"
+    dest: "{{ DOWNLOADS_PATH }}" 
+  tags: maven
+
+- name: Untar Apache Maven
+  unarchive:
+    src: "{{ DOWNLOADS_PATH }}/apache-maven-{{ MAVEN_VERSION }}-bin.tar.gz"
+    dest: "{{ APPLICATIONS_PATH }}"
+  tags: maven

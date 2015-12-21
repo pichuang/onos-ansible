@@ -1,0 +1,22 @@
+---
+- name: Install add-apt-repostory
+  apt: name=software-properties-common state=latest
+  tags: java
+
+- name: Add Oracle Java Repository
+  apt_repository: repo='ppa:webupd8team/java'
+  tags: java
+
+- name: Accept Java {{ JAVA_VERSION }} Licence
+  shell: echo oracle-java{{ JAVA_VERSION }}-installer shared/accepted-oracle-license-v1-1 select true | tee /etc/oracle-java-{{ JAVA_VERSION }}-licence-acceptance | /usr/bin/debconf-set-selections
+  args:
+    creates: /etc/oracle-java-{{ JAVA_VERSION }}-licence-acceptance
+  tags: java
+
+- name: Install Oracle Java {{ JAVA_VERSION }}
+  apt: name={{item}} state=latest
+  with_items:
+    - oracle-java{{ JAVA_VERSION }}-installer
+    - ca-certificates
+    - oracle-java{{ JAVA_VERSION }}-set-default
+  tags: java
