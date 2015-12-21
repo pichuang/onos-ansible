@@ -1,2 +1,2 @@
 [onos-master]
-onos-master ansible_ssh_user=root
+onos-master

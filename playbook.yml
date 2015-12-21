@@ -1,6 +1,6 @@
 ---
 - hosts: onos-master
-  remote_user: root
+  #remote_user: root
   vars_files:
     - group_vars/version
     - group_vars/config

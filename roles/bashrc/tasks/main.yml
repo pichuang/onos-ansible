@@ -10,6 +10,7 @@
   lineinfile:
     dest: "~/.bashrc"
     line: "source ~/.onos_env"
+    mode: 0644
   tags: bashrc
 
 - name: Source bashrc
