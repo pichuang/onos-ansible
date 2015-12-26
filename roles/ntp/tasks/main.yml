@@ -34,5 +34,6 @@
   sudo: yes
   tags: ntp
 
-- debug: msg="System time {{ time_result.stdout }}"
+- name: Check timestamp
+  debug: msg={{ time_result.stdout_lines }}
   tags: ntp
