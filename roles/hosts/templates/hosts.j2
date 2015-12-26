@@ -1,0 +1,9 @@
+{# Add onos master hostname to /etc/hosts#}
+{% for host in groups['onos-master'] %}
+{{ hostvars[host].ansible_default_ipv4.address }} {{ host }}
+{% endfor %}
+
+{# Add onos slave hostname to /etc/hosts#}
+{% for host in groups['onos-slave'] %}
+{{ hostvars[host].ansible_default_ipv4.address }} {{ host }}
+{% endfor %}
