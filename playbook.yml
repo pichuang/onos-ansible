@@ -10,7 +10,7 @@
     - java
     - maven
     - karaf
-    - bashrc
+    - onos_env
     - onos
     - cell
     - help
