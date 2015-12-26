@@ -16,7 +16,6 @@
   get_url:
     url: "{{ KARAF_MIRROR }}"
     dest: "{{ DOWNLOADS_PATH }}"
-    force: no
   tags: karaf
 
 - name: Untar Apache Karaf
@@ -32,3 +31,9 @@
     mode: 0644
   tags: karaf
 
+- name: Add enviroment variables to setenv
+  template:
+    src: "setenv.j2"
+    dest: "{{ KARAF_ROOT }}/bin/setenv"
+    mode: 0755
+  tags: karaf

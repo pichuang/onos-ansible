@@ -16,7 +16,6 @@
   get_url:
     url: "{{ MAVEN_MIRROR }}"
     dest: "{{ DOWNLOADS_PATH }}"
-    force: no
   tags: maven
 
 - name: Untar Apache Maven

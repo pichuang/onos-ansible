@@ -4,10 +4,14 @@ APPLICATIONS_PATH: "~/Applications"
 DOWNLOADS_PATH: "~/Downloads"
 HOME_PATH: "~/"
 ONOS_ROOT: "~/onos"
-JAVA_HOME: "/usr/lib/jvm/java-8-oracle"
-JRE_HOME: "/usr/lib/jvm/java-8-oracle/jre"
 KARAF_ROOT: "~/Applications/apache-karaf-3.0.3"
 M2_HOME: "~/Applications/apache-maven-3.3.1"
+JAVA_HOME: "/usr/lib/jvm/java-8-oracle"
+JRE_HOME: "/usr/lib/jvm/java-8-oracle/jre"
+JAVA_MIN_MEM: "256M" # Minimum memory for the JVM
+JAVA_MAX_MEM: "2048M" # Maximum memory for the JVM
+JAVA_PERM_MEM: "128M" # Minimum perm memory for the JVM
+JAVA_MAX_PERM_MEM: "256M" # Maximum perm memory for the JVM
 
 # Variable
 ONOS_USER: "root"

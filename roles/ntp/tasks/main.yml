@@ -14,7 +14,6 @@
   sudo: yes
   tags: ntp
 
-# XXX: run_once is useless
 - name: Write to hardware
   command: 'hwclock -w'
   run_once: true
