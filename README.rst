@@ -5,13 +5,7 @@ Step by Step
 
 1. Check variable in hosts and group_vars/{config.yml, version.yml}
 
-2. Install Ansible if not installed
+2. Install by script
 
-   `./install_ansible.sh`
-
-3. Install ONOS Project
-
-   `ansible-playbook -i hosts playbook.yml --ask-sudo-pass --ask-pass`
-
-
+   `./install.sh`
 
