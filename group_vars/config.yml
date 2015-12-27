@@ -12,7 +12,7 @@ JAVA_MIN_MEM: "256M" # Minimum memory for the JVM
 JAVA_MAX_MEM: "2048M" # Maximum memory for the JVM
 
 # Variable
-ONOS_USER: "root"
-ONOS_GROUP: "root"
+ONOS_USER: "onos"
+ONOS_GROUP: "onos"
 ONOS_CELL: "sdnds-tw"
 TIMEZONE: "Asia/Taipei"
