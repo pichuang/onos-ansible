@@ -9,7 +9,10 @@ echo
 echo "ONOS Enviroment: ~/.onos_env"
 echo
 
-echo
 echo "Run ONOS"
 echo "# ok clean"
 echo
+
+echo "Run ONOS WEB GUI"
+echo "http://{{ ansible_default_ipv4.address }}:8181/onos/ui/index.html"
+echo "Account/Password: {{ ONOS_WEB_USER }}/{{ ONOS_WEB_PASS }}"

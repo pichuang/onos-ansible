@@ -1,5 +1,5 @@
 ---
-- hosts: onos-master
+- hosts: all
   vars_files:
     - group_vars/version.yml
     - group_vars/config.yml
@@ -8,9 +8,16 @@
     - ntp
     - hosts
     - java
+
+- hosts: onos-master
+  vars_files:
+    - group_vars/version.yml
+    - group_vars/config.yml
+  roles:
     - maven
     - karaf
     - onos_env
     - onos
     - cell
     - help
+
