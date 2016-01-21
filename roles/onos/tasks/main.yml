@@ -15,7 +15,7 @@
   tags: onos
 
 - name: Build ONOS
-  command: "mvn clean install"
   args:
     chdir: "{{ ONOS_ROOT }}"
+  command: "{{ M2_HOME }}/bin/mvn clean install"
   tags: onos
