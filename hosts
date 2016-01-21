@@ -1,4 +1,4 @@
-[onos-onossystemtest]
-master_template ansible_host=10.211.55.121
+[onos-master]
+master_template
 
 [onos-slave]
