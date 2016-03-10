@@ -20,6 +20,7 @@
 
 - name: Untar Apache Maven
   unarchive:
+    copy: no
     src: "{{ DOWNLOADS_PATH }}/apache-maven-{{ MAVEN_VERSION }}-bin.tar.gz"
     dest: "{{ APPLICATIONS_PATH }}"
   tags: maven

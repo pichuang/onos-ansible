@@ -20,6 +20,7 @@
 
 - name: Untar Apache Karaf
   unarchive:
+    copy: no
     src: "{{ DOWNLOADS_PATH }}/apache-karaf-{{ KARAF_VERSION }}.tar.gz"
     dest: "{{ APPLICATIONS_PATH }}"
   tags: karaf
