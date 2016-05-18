@@ -27,7 +27,7 @@ fi
 
 function Install_ONOS() {
 
-ansible-playbook -i hosts playbook.yml -k -K
+ansible-playbook -i hosts playbook.yml -k -K --connection=local
 
 }
 
