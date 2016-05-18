@@ -5,23 +5,3 @@ KARAF_VERSION: 3.0.3
 MAVEN_VERSION: 3.3.1
 ONOS_VERSION: 1.4.0
 
-features_repositories:
-    - mvn:org.apache.karaf.features/standard/3.0.3/xml/features
-    - mvn:org.apache.karaf.features/enterprise/3.0.3/xml/features
-    - mvn:org.ops4j.pax.web/pax-web-features/3.1.4/xml/features
-    - mvn:org.apache.karaf.features/spring/3.0.3/xml/features
-    - mvn:org.onosproject/onos-features/1.4.0/xml/features
-
-features_boot:
-    - config
-    - standard
-    - region
-    - package
-    - kar
-    - ssh
-    - management
-    - drivers
-    - openflow
-    - proxyarp
-    - mobility
-    - fwd
