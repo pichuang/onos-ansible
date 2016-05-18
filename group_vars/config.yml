@@ -18,3 +18,10 @@ ONOS_WEB_USER: "onos"
 ONOS_WEB_PASS: "rocks"
 ONOS_CELL: "sdnds-tw"
 TIMEZONE: "Asia/Taipei"
+
+# Version
+JAVA_VERSION: 8
+KARAF_VERSION: 3.0.5
+MAVEN_VERSION: 3.3.9
+ONOS_VERSION: onos-1.5
+
