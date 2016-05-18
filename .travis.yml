@@ -1,9 +1,9 @@
 install:
-    - apt-get update
-    - apt-get install -y software-properties-common
-    - apt-add-repository -y ppa:ansible/ansible
-    - apt-get update
-    - apt-get install -y ansible
+    - sudo apt-get update
+    - sudo apt-get install -y software-properties-common
+    - sudo apt-add-repository -y ppa:ansible/ansible
+    - sudo apt-get update
+    - sudo apt-get install -y ansible
     - ansible --version
-    - sed -i "s/onos_build_machine/$MASTER_HOSTNAME/g" hosts
-    - ansible-playbook -i hosts playbook.yml --connection=local
+    - sudo sed -i "s/onos_build_machine/$MASTER_HOSTNAME/g" hosts
+    - sudo ansible-playbook -i hosts playbook.yml --connection=local
