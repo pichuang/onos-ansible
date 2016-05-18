@@ -6,7 +6,6 @@
   roles:
     - apt
     - ntp
-    - hosts
     - java
     - maven
     - karaf
