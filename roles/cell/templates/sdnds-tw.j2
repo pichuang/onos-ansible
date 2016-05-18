@@ -13,7 +13,7 @@ export OCI="{{ ansible_eth0.ipv4.address }}"
 export ONOS_APPS="drivers,openflow,fwd,proxyarp,mobility"
 
 # the Mininet VM (if you have one)
-export OCN="{{ ansible_eth0.ipv4.address }}"
+# export OCN=""
 
 # pattern to specify which address to use for inter-ONOS node communication (not used with single-instance core)
 {% set ip = ansible_eth0.ipv4.address.split('.') %}
