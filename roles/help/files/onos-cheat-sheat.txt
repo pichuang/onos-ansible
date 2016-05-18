@@ -1,8 +1,19 @@
+#
+# Following https://blog.night9.cc/build-onos-cluster
+#
+
 # build world
 ob -T 4
 
 # Rebuild code if code is change
 obs -T 4
+
+# Deploy&Setup ONOSs instances
+stc setup
+
+# Start all of ONOS instances
+stc startup
+stc shutdown
 
 # Run ONOS instance
 ok clean
