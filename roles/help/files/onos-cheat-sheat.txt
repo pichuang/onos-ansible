@@ -8,6 +8,9 @@ ob -T 4
 # Rebuild code if code is change
 obs -T 4
 
+# Packing ONOS Tarball
+onos-package # or command `op`
+
 # Deploy&Setup ONOSs instances
 stc setup
 
