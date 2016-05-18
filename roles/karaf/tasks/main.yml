@@ -25,13 +25,6 @@
     dest: "{{ APPLICATIONS_PATH }}"
   tags: karaf
 
-- name: Add features in org.apache.karaf.features.cfg
-  template:
-    src: "org.apache.karaf.features.cfg.j2"
-    dest: "{{ KARAF_ROOT }}/etc/org.apache.karaf.features.cfg"
-    mode: 0644
-  tags: karaf
-
 - name: Add enviroment variables to setenv
   template:
     src: "setenv.j2"
