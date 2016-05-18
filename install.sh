@@ -20,7 +20,7 @@ fi
 function Replace_Hostname() {
 
 if ! grep --quiet $MASTER_HOSTNAME hosts; then
-    sed -i "s/master_template/$MASTER_HOSTNAME/g" hosts
+    sed -i "s/onos_build_machine/$MASTER_HOSTNAME/g" hosts
 fi
 
 }

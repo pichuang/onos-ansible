@@ -1,4 +1,3 @@
-[onos-master]
-master_template
+[onos-build-machine]
+onos_build_machine
 
-[onos-slave]

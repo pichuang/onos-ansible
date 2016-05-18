@@ -1,5 +1,5 @@
 ---
-- hosts: onos-master
+- hosts: onos-build-machine
   sudo: yes
   vars_files:
     - group_vars/version.yml
