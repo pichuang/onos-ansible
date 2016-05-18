@@ -14,5 +14,7 @@ JAVA_MAX_MEM: "2048M" # Maximum memory for the JVM
 # Variable
 ONOS_USER: "root"
 ONOS_GROUP: "root"
+ONOS_WEB_USER: "onos"
+ONOS_WEB_PASS: "rocks"
 ONOS_CELL: "sdnds-tw"
 TIMEZONE: "Asia/Taipei"
