@@ -18,8 +18,16 @@ stc setup
 stc startup
 stc shutdown
 
-# Run ONOS instance
+# Run ONOS single instance
 ok clean
+
+# Login ONOS Cluster CLI
+onos $OCI
+
+# WEB GUI
+http://$OCI:8181/onos/ui/index.html
+* Default ONOS web user/password: onos/rocks
+
 
 # View log
 tl
