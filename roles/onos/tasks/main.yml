@@ -19,3 +19,10 @@
     chdir: "{{ ONOS_ROOT }}"
   command: "{{ M2_HOME }}/bin/mvn clean install"
   tags: onos
+
+- name: Packing ONOS Tarball
+  args:
+    chdir: "{{ ONOS_ROOT }}"
+  command: "{{ ONOS_ROOT }}/tools/build/onos-package"
+  tags: onos
+
