@@ -24,3 +24,21 @@
     chdir: "{{ ONOS_ROOT }}"
   command: "{{ ONOS_ROOT }}/tools/build/onos-package"
   tags: onos
+
+- name: Append enviroment variables in bashrc
+  template:
+    src: "onos_env.j2"
+    dest: "~/.onos_env"
+    mode: 0444
+  tags:
+    - onos
+    - bashrc
+
+- name: Append source file in bashrc
+  lineinfile:
+    dest: "~/.bashrc"
+    line: "source ~/.onos_env"
+    mode: 0644
+  tags:
+    - onos
+    - bashrc

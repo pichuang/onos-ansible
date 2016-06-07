@@ -2,6 +2,9 @@
 # Following https://blog.night9.cc/build-onos-cluster
 #
 
+# Source enviroment
+source ~/.bashrc
+
 # build world
 ob -T 4
 

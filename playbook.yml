@@ -9,7 +9,6 @@
     - java
     - maven
     - karaf
-    - onos_env
     - onos
     - cell
     - help

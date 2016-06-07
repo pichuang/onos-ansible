@@ -1,8 +1,0 @@
----
-- name: Append enviroment variables in bashrc
-  template:
-    src: "onos_env.j2"
-    dest: "~/.onos_env"
-    mode: 0444
-  tags: bashrc
-
