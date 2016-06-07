@@ -10,7 +10,6 @@
     dest: "{{ ONOS_ROOT }}"
     update: no
     accept_hostkey: true
-    version: "{{ ONOS_VERSION }}"
     force: no
   tags: onos
 
