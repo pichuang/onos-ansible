@@ -4,10 +4,10 @@
     regexp=us.archive.ubuntu.com
     replace=ubuntu.cs.nctu.edu.tw
     backup=yes
-  sudo: yes
+  become: yes
   tags: apt
 
 - name: Update APT Cache
   apt: update_cache=yes
-  sudo: yes
+  become: yes
   tags: apt

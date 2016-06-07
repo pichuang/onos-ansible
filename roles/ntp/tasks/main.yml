@@ -3,7 +3,7 @@
   apt:
     name=ntp
     state=installed
-  sudo: yes
+  become: yes
   tags: ntp
 
 - name: Change timezone
@@ -11,13 +11,13 @@
     src=/usr/share/zoneinfo/{{ TIMEZONE }}
     dest=/etc/localtime
     force=yes
-  sudo: yes
+  become: yes
   tags: ntp
 
 - name: Write to hardware
   command: 'hwclock -w'
   run_once: true
-  sudo: yes
+  become: yes
   tags: ntp
 
 - name: Be sure ntp daemon is running and enabled
@@ -25,13 +25,13 @@
     name=ntp
     state=running
     enabled=yes
-  sudo: yes
+  become: yes
   tags: ntp
 
 - name: Check System Time
   command: 'date'
   register: time_result
-  sudo: yes
+  become: yes
   tags: ntp
 
 - name: Check timestamp
