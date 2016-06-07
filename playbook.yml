@@ -4,7 +4,6 @@
   vars_files:
     - group_vars/config.yml
   roles:
-    - apt
     - ntp
     - java
     - maven
