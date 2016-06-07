@@ -6,15 +6,3 @@
     mode: 0444
   tags: bashrc
 
-- name: Append source file in bashrc
-  lineinfile:
-    dest: "~/.bashrc"
-    line: "source ~/.onos_env"
-    mode: 0644
-  tags: bashrc
-
-- name: Source bashrc
-  shell: source {{ HOME_PATH }}/.bashrc
-  args:
-    executable: /bin/bash
-  tags: bashrc

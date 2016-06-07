@@ -3,16 +3,17 @@ ONOS-Ansible Installer
 
 Installation of ONOS building enviroments
 
-Required
+Requirements
 
-- Ansible
-- If not install, please use `install_ansbile_from_ppa.sh`
+- RAM 4GB or higher
+- Ubuntu 14.04 LTS
+- Ansible 2.1.0 or higher
+  - If not install, please use `utils/install_ansbile_from_ppa.sh`
 
 Step by Step
 
-1. Check variable in hosts and group_vars/config.yml
+1. Check variables in `hosts` and `group_vars/config.yml`
 
-2. Install by script
+2. Set up ONOS Build Machine
 
-   `ansible-playbook -i hosts playbook.yml -k -K --connection=local`
-
+   `ansible-playbook -i hosts playbook.yml -K --connection=local`

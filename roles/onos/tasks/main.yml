@@ -24,4 +24,3 @@
     chdir: "{{ ONOS_ROOT }}"
   command: "{{ ONOS_ROOT }}/tools/build/onos-package"
   tags: onos
-
