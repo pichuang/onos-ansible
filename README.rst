@@ -12,8 +12,8 @@ Requirements
 
 Step by Step
 
-1. Check variables in `hosts` and `group_vars/config.yml`
+1. Check variables in `group_vars/config.yml`
 
 2. Set up ONOS Build Machine
 
-   `ansible-playbook -i hosts playbook.yml -K --connection=local`
+   `ansible-playbook playbook.yml -K --connection=local`
