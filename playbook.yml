@@ -1,6 +1,6 @@
 ---
 - hosts: onos-build-machine
-  sudo: yes
+  become: yes
   vars_files:
     - group_vars/config.yml
   roles:
