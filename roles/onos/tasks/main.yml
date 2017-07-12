@@ -4,6 +4,15 @@
     ONOS_REPOS: "https://github.com/opennetworkinglab/onos"
   tags: onos
 
+- name: Install required packages
+  apt: name={{ item }} state=present
+  with_items:
+    - unzip
+    - zip
+    - npm
+    - node
+  tags: apt
+
 - name: Clone ONOS
   git:
     repo: "{{ ONOS_REPOS }}"
@@ -16,7 +25,9 @@
 - name: Build ONOS
   args:
     chdir: "{{ ONOS_ROOT }}"
-  command: "{{ M2_HOME }}/bin/mvn clean install"
+  command: "{{ ONOS_ROOT }}/tools/build/onos-buck build onos --show-output"
+  environment:
+    ONOS_ROOT: '{{ ONOS_ROOT }}'
   tags: onos
 
 - name: Packing ONOS Tarball

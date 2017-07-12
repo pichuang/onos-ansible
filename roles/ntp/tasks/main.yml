@@ -23,7 +23,7 @@
 - name: Be sure ntp daemon is running and enabled
   service:
     name=ntp
-    state=running
+    state=started
     enabled=yes
   become: yes
   tags: ntp
